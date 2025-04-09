@@ -1,0 +1,261 @@
+#section-1 {
+    height: 75vh;
+    background-size: cover;
+    margin-top: 81px;
+}
+
+body {
+    display: block;
+    overflow-x: hidden;
+    background-color: lightblue;
+}
+nav {
+    background-color: white;
+}
+.navbar-brand img {
+    max-height: 50px;
+}
+.navbar-brand {
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: darkgreen;
+}
+
+nav ul li a {
+    color: green;
+    font-size: 22px;
+    margin: auto 10px;
+}
+nav ul li a:hover {
+    color: greenyellow;
+}
+
+.slide-in {
+    position: relative;
+    animation-name: slideIn;
+    animation-duration: 2.8s;
+    animation-iteration-count: 1;
+}
+
+@keyframes slideIn {
+    0%   {right:-10%; opacity:0;}
+    100% {right:0%; opacity:1}
+}
+
+@-moz-keyframes slideIn {
+    0%   {right:-10%; opacity:0;}
+    100% {right:0%; opacity:1}
+}
+
+@-webkit-keyframes slideIn {
+    0%   {right:-10%; opacity:0;}
+    100% {right:0%; opacity:1}
+}
+
+@-o-keyframes slideIn {
+    0%   {right:-10%; opacity:0;}
+    100% {right:0%; opacity:1}
+}
+
+@-ms-keyframes slideIn {
+    0%   {right:-10%; opacity:0;}
+    100% {right:0%; opacity:1}
+}
+
+section {
+    padding-top: 70px;
+    padding-bottom: 50px;
+}
+section h1 {
+    text-transform: uppercase;
+    font-weight: 900;
+    color: green;
+    text-align: left;
+    margin-bottom: 20px;
+}
+section p {
+    font-size: 16px;
+    font-weight: 300;
+    color: black;
+}
+
+/* .description {
+    color: black;
+    position: absolute;
+    padding-left: 50%;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+.text {
+    color: black;
+    position: absolute;
+    padding-left: 50%;
+    padding-top: 25%;
+} */
+
+button {
+    max-width: 50%;
+    border-radius: 50px !important;
+}
+#hero .col {
+    /* justify-content: center;  */
+    flex-direction: column;
+    display: flex;
+}
+#hero .img-col {
+    justify-content: flex-end;
+    border: 3px solid green;
+    border-right: transparent;
+}
+#hero img {
+    max-width: 130% !important;
+    width: 130%;
+}
+#hero .card {
+    box-shadow: 11px 7px 16px #000000;
+    border: 0;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#hero .card-body {
+    background-color: #262727;
+}
+
+#hero .card-title {
+    color: white;
+}
+
+#hero .icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+#projects .projects {
+    margin-bottom: 50px;
+}
+
+#projects .card {
+    color: white;
+    background-color: #262727;
+    box-shadow: 11px 7px 16px #000000;
+}
+
+#contact {
+    text-align: center;
+    background-color: #683aa4;
+    color: white;
+}
+#contact h1 {
+    text-align: center;
+    color: white;
+}
+#titulo {
+    text-transform: uppercase;
+    font-weight: 900;
+    text-shadow: #000000;
+    color: green;
+    text-align: left;
+    margin-bottom: 20px;
+    border-color: #000000;
+    padding-left: 5%;
+}
+
+#titulo2 {
+    text-transform: uppercase;
+    font-weight: 900;
+    color: green;
+    margin-bottom: 20px;
+    border-color: #000000;
+    
+    /*float: inline-end;*/
+}
+
+#texto {
+    font-size: 16px;
+    font-weight: 400;
+    color: black;
+    padding-left: 5%;
+}
+
+#texto2 {
+    font-size: 16px;
+    font-weight: 400;
+    color: black;
+    padding-right: 5%;
+}
+
+#bloque2 {
+    float: inline-end;
+    overflow: hidden;
+    white-space: nowrap;
+    padding-right: 5%;
+    background-color: rgba(13, 16, 175, 0.35);
+    padding: 1%;
+    border-radius: 25px;
+    margin-right: 5%;
+}
+
+.default {
+    border-radius: 25px;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-left: 5%;
+    margin-bottom: 1%;
+    border-width: 1px;
+    border-color: black;
+}
+
+.insert {
+    border-radius: 25px;
+    border-width: 1px;
+    border-color: black;
+    padding-left: 1%;
+    margin-left: 5%;
+    margin-bottom: 1%;
+    padding-right: 5%;
+}
+
+.insert2 {
+    border-radius: 25px;
+    border-width: 1px;
+    border-color: black;
+    padding-left: 1%;
+    padding-right: 5%;
+    margin-bottom: 1%;
+}
+
+#bloque {
+    background-color: rgba(13, 16, 175, 0.5);
+    display: inline-block;
+    padding-left: 1%;
+    padding-right: 5%;
+    padding-bottom: 1%;
+    padding-top: 1%;
+    margin-bottom: 1%;
+    margin-left: 5%;
+    border-radius: 15px;
+    color: #000000;
+}
+
+#button {
+    margin-left: 5%;
+    margin-bottom: 5%;
+}
+
+#popup-text2 {
+    background-color: rgba(0, 128, 0, 0.349);
+    padding: 1%;
+    border-radius: 15px;
+}
+
+#error {
+    color: red;
+}
+
+#error2 {
+    color: red;
+    margin-left: 5%;
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veterinaria</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+        integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="py-3 navbar navbar-expand-lg fixed-top auto-hiding-navbar bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img class="logo" src="assets/log0.png" height="55" width="auto" /> Veterinaria Sosa
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active font-weight-bold text-black" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link font-weight-bold text-black" href="#about-us">Información</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link font-weight-bold text-black" href="turnos.html">Turnos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End Navbar -->
+
+    <section></section>
+
+    <div id="bloque2">
+        <h1 id="titulo2">Ya pedí un turno</h1>
+        <p id="texto2">¿Ya pediste turno?<br>Hace click en este botón para comprobar tus detalles</p>
+        <input class="insert" type="number" name="dni2" id="dni2" placeholder="DNI..."><br>
+        <button id="button2" type="button" class="btn btn-success btn-large" onclick="consultaTurno()">Comprobar turno</button>
+    </div>
+    
+    <h1 id="titulo">Pedir turno</h1>
+    <p id="texto">Puede pedir un turno con el veterinario simplemente escogiendo <br>un día que le venga bien y una hora disponible</p>
+
+    <select id="fechas" name="fechas" class="default">
+        <option id="fecha" value="fecha">dia</option>
+    </select>
+    <br>
+    <select id="horas" name="horas" class="default">
+        <option id="hora" name="hora" value="hora">hora</option>
+    </select>
+    <br>
+    <br>
+    <h2 id="titulo">Datos del dueño</h2>
+    <p id="texto">* = significa que es un dato obligatorio.</p>
+    <div>
+        <input required class="insert" type="text" name="cliente" placeholder="Nombre... *">
+        <input required class="insert2" type="text" name="cliente" placeholder="Apellidos... *"><br>
+        <input required class="insert" type="number" name="cliente" placeholder="DNI... *" maxlength="8"><br>
+        <input class="insert" type="email" name="cliente" placeholder="Correo Electrónico..."><br>
+        <input required class="insert" type="text" name="cliente" placeholder="Teléfono... *"><br>
+        <textarea required class="insert" type="text" name="cliente" placeholder="Dirección... *"></textarea>
+    </div>
+    <br>
+    <h2 id="titulo">Datos de la mascota</h2>
+    <div>
+        <input required class="insert" type="text" name="mascota" placeholder="Especie del animal... *">
+        <-- Debe indicar la especie de su animal: Perro, gato, loro, etc... <br>
+        <input required class="insert" type="text" name="mascota" placeholder="Nombre de la mascota... *"> <br>
+        <input required class="insert" type="number" name="mascota" placeholder="Edad de la mascota (Si la sabe)"> <br>
+        <div id="bloque">
+            <td>
+                <p id="texto">Sexo de la mascota:</p>
+                <input required class="insert" type="radio" name="mascota2" value="0"> Macho <br>
+                <input required class="insert" type="radio" name="mascota2" value="1"> Hembra
+            </td>
+        </div>
+        <br>
+        <div id="bloque">
+            <td>
+                <p id="texto">¿Está castrado/a?:</p>
+                <input required class="insert" type="radio" name="mascota3" value="0"> No <br>
+                <input required class="insert" type="radio" name="mascota3" value="1"> Sí
+            </td>
+        </div>
+    </div>
+    <div id="errorField"></div>
+    <button id="button" type="button" class="btn btn-success btn-large" onclick="escribir()">Programar turno</button>
+
+
+    <dialog id="popup">
+        <h2>Estos son los datos de su turno</h2>
+            <div id="popup-text">
+                <h4>Placeholder</h4>
+            </div>
+        <button id="close" class="btn btn-success btn-large">Cerrar</button>
+    </dialog>
+    
+    <script src="app.js"></script>
+
+</body>
+</html>
