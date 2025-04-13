@@ -208,7 +208,8 @@ async function consultaTurno() {
             + "<br>" + "Cliente: " + rawResponse.data.nombre + " " + rawResponse.data.apellido + " con DNI " + rawResponse.data.dni
             + "<br>" + "Mascota: " + turno.data[i].mascota.nombre
             + "<br>" + "Será atendido por especialista " + turno.data[i].veterinario.nombre + " " + turno.data[i].veterinario.apellido
-            + "<br>" + "Día de la cita: " + turno.data[i].fecha + ", de " + turno.data[i].inicio + " hasta las " + turno.data[i].fin + "</div>";
+            + "<br>" + "Día de la cita: " + turno.data[i].fecha + ", de " + turno.data[i].inicio + " hasta las " + turno.data[i].fin
+            + "<br>" + "Estado: " + turno.data.status + "</div>";
             popupText.appendChild(datos);
         }
         
@@ -461,16 +462,19 @@ async function escribir() {
     var newTurno = {fecha: diaTurno, inicio: inicioString, fin: finString, status: "Necesita confirmación", mascota: newMascota, veterinario: {id: vetEscogido}, cliente: {id: idCargada}}
     let sendTurno = await crearTurno(newTurno);
 
+    let popupText = document.getElementById("popup-text");
+    popupText.innerHTML = " ";
     let turno = await cargarTurnoPorId(sendTurno.data.id);
     var datos = document.createElement('h4');
     datos.innerHTML = "<div id='popup-text2'> Código de turno: " + turno.data.id
-        + "<br>" + "Cliente: " + rawResponse.data.nombre + " " + rawResponse.data.apellido + " con DNI " + rawResponse.data.dni
+        + "<br>" + "Cliente: " + turno.data.cliente.nombre + " " + turno.data.cliente.apellido + " con DNI " + turno.data.cliente.dni
         + "<br>" + "Mascota: " + turno.data.mascota.nombre
         + "<br>" + "Será atendido por especialista " + turno.data.veterinario.nombre + " " + turno.data.veterinario.apellido
-        + "<br>" + "Día de la cita: " + turno.data.fecha + ", de " + turno.data.inicio + " hasta las " + turno.data.fin + "</div>";
+        + "<br>" + "Día de la cita: " + turno.data.fecha + ", de " + turno.data.inicio + " hasta las " + turno.data.fin 
+        + "<br>" + "Estado: " + turno.data.status + "</div>";
     popupText.appendChild(datos);
     popup.showModal()
-    //Y es vencer, y es vencer... ~𝅘𝅥𝅮 (Probar esto), agregar confirmación a la consulta
+    //Y es vencer, y es vencer... ~𝅘𝅥𝅮 (Probar esto)
 }
 
 //Pendiente: Validación de email y num telefono???
